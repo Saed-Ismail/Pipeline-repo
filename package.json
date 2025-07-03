@@ -9,4 +9,8 @@
     "express": "^4.18.2"
   }
 }
+"dependencies": {
+  "express": "^4.18.2",
+  "prom-client": "^14.1.1"
+}
 
