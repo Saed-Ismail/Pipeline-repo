@@ -3,7 +3,7 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - main
+      - main  # or replace with your default branch
 
 jobs:
   deploy:
@@ -34,5 +34,5 @@ jobs:
         script: |
           docker rm -f myapp || true
           docker pull saedismail/node-docker-app:latest
-          docker run -d --name myapp --network host saedismail/node-docker-app:latest
+          docker run -d --name myapp -p 3000:3000 saedismail/node-docker-app:latest
 
