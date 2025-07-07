@@ -17,7 +17,7 @@ register.registerMetric(httpRequestCounter);
 // Root endpoint
 app.get('/', (req, res) => {
   httpRequestCounter.inc();
-  res.send('🚀 Hello Ridwan!!, your app just auto-deployed via GitHub Actions!');
+  res.send('🚀 Hello Saed!!, your app just auto-deployed via GitHub Actions!');
 });
 
 // Metrics endpoint
