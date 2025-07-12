@@ -1,5 +1,5 @@
-# Pipeline Repo
-# 🚀 DevOps Portfolio Project
+# DevOps Project – Saed Ismail
+This project demonstrates infrastructure automation, CI/CD, monitoring, and more.
 
 A full-cycle DevOps project that demonstrates Infrastructure as Code (IaC), containerization, CI/CD automation, cloud deployment, monitoring, and observability using modern DevOps tools.
 
