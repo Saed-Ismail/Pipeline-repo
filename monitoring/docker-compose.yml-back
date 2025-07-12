@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  prometheus:
+    image: prom/prometheus
+    volumes:
+      - ./prometheus:/etc/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+    ports:
+      - "9090:9090"
+    networks:
+      - monitor-net
+
+  grafana:
+    image: grafana/grafana
+    ports:
+      - "3001:3000"
+    volumes:
+      - grafana-storage:/var/lib/grafana
+    networks:
+      - monitor-net
+
+  myapp:
+    image: saedismail/node-docker-app:latest
+    ports:
+      - "3000:3000"
+    networks:
+      - monitor-net
+
+volumes:
+  grafana-storage:
+
+networks:
+  monitor-net:
+
